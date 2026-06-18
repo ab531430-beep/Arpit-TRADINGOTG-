@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Weather Dashboard</h1>
+
+    <form id="search-form" class="controls" autocomplete="off">
+      <input id="city-input" type="search" placeholder="Enter city name" aria-label="City name" />
+      <button type="submit">Search</button>
+      <button type="button" id="loc-btn">Use My Location</button>
+      <label class="units">
+        <input type="checkbox" id="unit-toggle" />
+        <span id="unit-label">°C</span>
+      </label>
+    </form>
+
+    <section id="weather" class="weather hidden" aria-live="polite">
+      <div id="current" class="current"></div>
+      <h2>5-day forecast</h2>
+      <div id="forecast" class="forecast"></div>
+    </section>
+
+    <div id="message" class="message" role="status"></div>
+
+    <footer>
+      <p>Powered by <a href="https://openweathermap.org/" target="_blank" rel="noopener">OpenWeatherMap</a></p>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
